@@ -37,7 +37,13 @@ SO when sender will send some request then it will go throuth multiple chains of
 
 
 
+                                       Base Class
+                                    /       |         \
+                                   /        |          \
+                          childClass1 ->childClass2 -> childClass3 --> .....
 
+
+   so request will pass through all the object
 
 
 
