@@ -133,4 +133,39 @@ int main()
 
     return 0;
 }
+=======================================================================================
+Explanation:
+
+Base Class (Handler):
+=====================
+Defines an interface for handling requests.
+Holds a pointer to the next handler (nextHandler) in the chain.
+
+Concrete Handlers:
+==================
+Each class (e.g., CustomerSupportExecutive, TeamLead, Manager) implements the handleRequest method.
+Each handler processes the request it can handle and forwards unhandled requests to the next handler.
+
+Main Function:
+===============
+Objects are chained together (cse -> lead -> manager).
+Requests are passed through the chain until an appropriate handler processes them.
+//========================================================================================
+virtual void handleRequest(const string& issueType);
+why it is virtual??
+
+Ans ==>
+1. Without virtual, the method call would be resolved at compile-time based on the static type of the pointer or reference.
+2. With virtual, the method call is resolved at runtime based on the actual type of the object the pointer refers to.
+
+Example to Understand:
+    Handler* handler = new TeamLead();
+    handler->handleRequest("Medium");
+
+Without virtual: The base class's handleRequest is called regardless of the actual object type (TeamLead).
+With virtual: The handleRequest implementation of TeamLead is called, as it's the actual type of the object.
+
+If virtual is not used:
+The compiler will statically bind the handleRequest call to the base class (Handler) implementation.
+===========================================================================================
 
