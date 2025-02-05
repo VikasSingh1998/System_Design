@@ -74,4 +74,15 @@ int main()
 
     return 0;
 }
+/* ========================================================================================
+                     Vehicle(Abstract Classs)                      Factory(Interface)
+                    /       \                                           /       \
+                  /           \                                        /         \
+    2WheelerVehicle       4wheelerVehicle                   2wheelerFactory       4WheelerFactory
 
+
+
+2WheelerFactory creates the 2 Wheeler Vehicles.
+4WheelerFactory creates the 4 wheeler Vehicles.
+
+*/
