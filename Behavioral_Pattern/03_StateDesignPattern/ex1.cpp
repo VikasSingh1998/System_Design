@@ -63,7 +63,6 @@ Q: Kab ITVStates me function add ya remove karna chahiye??
 Ans: 
 jab koi new EVENTS add ho(remote me new button add hone pr.)
 
-Q: 
 */
 //----------------------------------------------------------------------------
 class TVOnState : public ITVStates
